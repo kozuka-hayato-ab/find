@@ -9,6 +9,6 @@ public class GameManger : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        elementController.InitElements(1);
+        elementController.InitElements();
     }
 }

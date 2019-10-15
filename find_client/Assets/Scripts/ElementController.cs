@@ -31,6 +31,16 @@ public class ElementController : MonoBehaviour
         ClearElementsConfig();
     }
 
+    public void InitElements()
+    {
+        for (int i = 0; i < elements.Count; i++)
+        {
+            int _mark = UnityEngine.Random.Range(0, Enum.GetNames(typeof(GameDefine.MarkDefine)).Length);
+            int _color = UnityEngine.Random.Range(0, Enum.GetNames(typeof(GameDefine.ColorDefine)).Length);
+            elements[i].SetElement(_mark, _color);
+        }
+    }
+
     public void ClearElementsConfig()
     {
         marks.Clear();
